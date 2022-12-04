@@ -79,7 +79,6 @@ var broj = process.argv.slice(2)[0];
 
 switch (isNaN(broj)) {
     case true:
-        console.log(broj);
         var broj = 7;
         var slucajnibroj = Math.floor(Math.random() * 10);
         if (slucajnibroj === (Number(broj))) {
@@ -90,7 +89,6 @@ switch (isNaN(broj)) {
         break;
     default:
         var slucajnibroj = Math.floor(Math.random() * 10);
-        console.log(slucajnibroj);
         if (slucajnibroj === (Number(broj))) {
             console.log("Jackpot");
         } else {
