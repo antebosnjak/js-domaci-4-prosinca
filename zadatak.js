@@ -62,7 +62,7 @@ switch (isNaN(age)) {
     default:
         console.log("Pogresan unos");
         break;
-} 
+}
 
 
 
@@ -75,15 +75,27 @@ Napomena: Ukoliko ne znate koristiti Math.random pokusajte guglati kako se koris
 
 var broj = process.argv.slice(2)[0];
 
+
+
 switch (isNaN(broj)) {
     case true:
-        var unesenibroj = 7;
-        var unesenibroj = unesenibroj.toString();
-        console.log("Tvoj sretni broj je " + unesenibroj);
+        console.log(broj);
+        var broj = 7;
+        var slucajnibroj = Math.floor(Math.random() * 10);
+        if (slucajnibroj === (Number(broj))) {
+            console.log("Jackpot");
+        } else {
+            console.log("Vise srece drugi put");
+        }
         break;
     default:
-        var sretnibroj = Math.floor(Math.random() * 10);
-        var sretnibroj = sretnibroj.toString();
-        console.log("Tvoj sretni broj je " + sretnibroj);
+        var slucajnibroj = Math.floor(Math.random() * 10);
+        console.log(slucajnibroj);
+        if (slucajnibroj === (Number(broj))) {
+            console.log("Jackpot");
+        } else {
+            console.log("Vise srece drugi put");
+        }
         break;
 }
+
